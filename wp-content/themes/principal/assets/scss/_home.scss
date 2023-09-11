@@ -1,0 +1,238 @@
+#header {
+    padding: 0 5%;
+    background-image: url('../images/life-original-10.png');
+    background-size: cover;
+    text-align: center;
+
+    .container-header {
+        display: flex;
+        justify-content: space-between;
+
+        .text-header {
+            width: 50%;
+            padding-top: 10%;
+            h1 {
+                font-size: 3rem;
+                font-family: 'GreatVibes', sans-serif;
+                color: $black;
+            }
+            h2 {
+                font-size: 2rem;
+                font-family: 'GreatVibes', sans-serif;
+                color: $light_black;
+                font-weight: 100;
+            }
+        }
+        .img-header {
+            width: 50%;
+            img {
+                width: 100%;
+            }
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+        @media (max-width: 768px) {
+            flex-direction: column;
+
+            .text-header {
+                padding-top: 100px;
+                width: 100%;
+            }
+        }
+    }
+
+    .divisor {
+        height: 30px;
+        background: linear-gradient(to top, $body, transparent);
+        border: none;
+        margin: 0;
+    }
+}
+
+#schooner {
+    padding: 0 5%;
+    margin-top: 30px;
+    .text-schooner {
+        h2 {
+            font-size: 2rem;
+            font-family: 'GreatVibes', sans-serif;
+            color: $light_black;
+            font-weight: 100;
+            display: inline-block;
+            position: relative;
+
+            &:after {
+                content: '';
+                display: block;
+                width: 50%;
+                height: 2px;
+                background-color: $light_black;
+                position: absolute;
+                bottom: 0;
+                left: 25%;
+            }
+        }
+    }
+    .slider-schooner {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        .card-schooner {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            img {
+                border-radius: 10%;
+                width: 250px;
+                height: 250px;
+            }
+            span {
+                margin-top: 15px;
+                font-size: 1rem;
+                font-family: 'Latos', sans-serif;
+                color: $black;
+                font-weight: 100;
+            }
+        }
+    }
+}
+
+#about-us {
+    padding: 0 5%;
+    margin-top: 100px;
+    display: flex;
+    .img-about-us {
+        width: 50%;
+        img {
+            width: 100%;
+        }
+    }
+    .text-about-us {
+        width: 50%;
+        h2 {
+            font-size: 2rem;
+            font-family: 'GreatVibes', sans-serif;
+            color: $light_black;
+            font-weight: 100;
+            text-align: center;
+            position: relative;
+
+            &:after {
+                content: "";
+                display: block;
+                width: 10%;
+                height: 2px;
+                background-color: $light_black;
+                position: absolute;
+                bottom: 0;
+                left: 45%;
+            }
+        }
+        h3 {
+            margin-top: 30px;
+            font-size: 1rem;
+            color: $light_black;
+            font-weight: 100;
+            text-align: justify;
+        }
+    }
+}
+
+#count {
+    padding: 0 5%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    // .card-cound {
+    //     width: 290px;
+    //     height: 150px;
+    //     background-color: $body;
+    //     border: 2px solid #dfdfdf;
+    //     border-radius: 10px;
+    //     display: flex;
+    //     flex-direction: column;
+    //     text-align: center;
+    //     align-items: center;
+    //     justify-content: center;
+    //     .value {
+    //         color: $value;
+    //         font-size: 2rem;
+    //         font-weight: bold;
+    //     }
+    //     .description {
+    //         margin-top: 10px;
+    //         font-size: 1.5rem;
+    //     }
+    // }
+    // TODO no header
+    .card-cound {
+        width: 100px;
+        height: 80px;
+        background-color: transparent;
+        border: 2px solid #dfdfdf;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        .value {
+            color: $value;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .description {
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+    }
+}
+
+#house {
+    padding: 0 5%;
+    margin-top: 30px;
+    .text-house {
+        h2 {
+            font-size: 2rem;
+            font-family: 'GreatVibes', sans-serif;
+            color: $light_black;
+            font-weight: 100;
+            display: inline-block;
+            position: relative;
+
+            &:after {
+                content: '';
+                display: block;
+                width: 50%;
+                height: 2px;
+                background-color: $light_black;
+                position: absolute;
+                bottom: 0;
+                left: 25%;
+            }
+        }
+    }
+    .slider-house {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        .card-house {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            img {
+                border-radius: 10%;
+                width: 250px;
+                height: 200px;
+            }
+            span {
+                margin-top: 15px;
+                font-size: 1rem;
+                font-family: 'Latos', sans-serif;
+                color: $black;
+                font-weight: 100;
+            }
+        }
+    }
+}

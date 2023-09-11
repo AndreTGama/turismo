@@ -802,3 +802,9 @@ function twentytwenty_get_elements_array() {
 	 */
 	return apply_filters( 'twentytwenty_get_elements_array', $elements );
 }
+
+// Insert By André
+function adicionar_fontes_personalizadas() {
+    wp_enqueue_style('fonte-personalizada', get_template_directory_uri() . '/assets/fonts/great_vibes/GreatVibes-Regular.ttf');
+}
+add_action('wp_enqueue_scripts', 'adicionar_fontes_personalizadas');

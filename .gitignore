@@ -38,8 +38,7 @@ wp-content/debug.log
 # Ignore Node.js dependencies and build files
 node_modules/
 npm-debug.log
-Gruntfile.js
-Gulpfile.js
+dist/
 
 # Ignore Composer dependencies
 vendor/

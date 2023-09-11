@@ -1,122 +1,116 @@
 <?php
-/**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Twenty Twenty 1.0
- */
-
 get_header();
 ?>
-
-<main id="site-content">
-
-	<?php
-
-	$archive_title    = '';
-	$archive_subtitle = '';
-
-	if ( is_search() ) {
-		/**
-		 * @global WP_Query $wp_query WordPress Query object.
-		 */
-		global $wp_query;
-
-		$archive_title = sprintf(
-			'%1$s %2$s',
-			'<span class="color-accent">' . __( 'Search:', 'twentytwenty' ) . '</span>',
-			'&ldquo;' . get_search_query() . '&rdquo;'
-		);
-
-		if ( $wp_query->found_posts ) {
-			$archive_subtitle = sprintf(
-				/* translators: %s: Number of search results. */
-				_n(
-					'We found %s result for your search.',
-					'We found %s results for your search.',
-					$wp_query->found_posts,
-					'twentytwenty'
-				),
-				number_format_i18n( $wp_query->found_posts )
-			);
-		} else {
-			$archive_subtitle = __( 'We could not find any results for your search. You can give it another try through the search form below.', 'twentytwenty' );
-		}
-	} elseif ( is_archive() && ! have_posts() ) {
-		$archive_title = __( 'Nothing Found', 'twentytwenty' );
-	} elseif ( ! is_home() ) {
-		$archive_title    = get_the_archive_title();
-		$archive_subtitle = get_the_archive_description();
-	}
-
-	if ( $archive_title || $archive_subtitle ) {
-		?>
-
-		<header class="archive-header has-text-align-center header-footer-group">
-
-			<div class="archive-header-inner section-inner medium">
-
-				<?php if ( $archive_title ) { ?>
-					<h1 class="archive-title"><?php echo wp_kses_post( $archive_title ); ?></h1>
-				<?php } ?>
-
-				<?php if ( $archive_subtitle ) { ?>
-					<div class="archive-subtitle section-inner thin max-percentage intro-text"><?php echo wp_kses_post( wpautop( $archive_subtitle ) ); ?></div>
-				<?php } ?>
-
-			</div><!-- .archive-header-inner -->
-
-		</header><!-- .archive-header -->
-
-		<?php
-	}
-
-	if ( have_posts() ) {
-
-		$i = 0;
-
-		while ( have_posts() ) {
-			$i++;
-			if ( $i > 1 ) {
-				echo '<hr class="post-separator styled-separator is-style-wide section-inner" aria-hidden="true" />';
-			}
-			the_post();
-
-			get_template_part( 'template-parts/content', get_post_type() );
-
-		}
-	} elseif ( is_search() ) {
-		?>
-
-		<div class="no-search-results-form section-inner thin">
-
-			<?php
-			get_search_form(
-				array(
-					'aria_label' => __( 'search again', 'twentytwenty' ),
-				)
-			);
-			?>
-
-		</div><!-- .no-search-results -->
-
-		<?php
-	}
-	?>
-
-	<?php get_template_part( 'template-parts/pagination' ); ?>
-
-</main><!-- #site-content -->
-
-<?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
-
+<section id="header">
+	<div class="container-header">
+		<div class="text-header">
+			<h1>
+				Venha conhcer Paraty!
+			</h1>
+			<h2>
+				Viva momentos inesquecíveis em meio à beleza natural e à história desta cidade encantadora.
+			</h2>
+			<div id="count">
+				<div class="card-cound">
+					<span class="value">5+</span>
+					<span class="description">Ilhas</span>
+				</div>
+				<div class="card-cound">
+					<span class="value">5+</span>
+					<span class="description">Praias</span>
+				</div>
+				<div class="card-cound">
+					<span class="value">5+</span>
+					<span class="description">Bares</span>
+				</div>
+				<div class="card-cound">
+					<span class="value">5+</span>
+					<span class="description">Bares</span>
+				</div>
+			</div>
+		</div>
+		<div class="img-header">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/woman-3.png" alt="centro historico de Paraty" />
+		</div>
+	</div>
+	<div class="divisor"></div>
+</section>
+<section id="schooner">
+	<div class="text-schooner">
+		<h2>
+			Nossas Escunas
+		</h2>
+	</div>
+	<div class="slider-schooner">
+		<div class="card-schooner">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/escuna.jpg" alt="centro historico de Paraty" />
+			<span>Escuna 1</span>
+		</div>
+		<div class="card-schooner">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/escuna.jpg" alt="centro historico de Paraty" />
+			<span>Escuna 2</span>
+		</div>
+		<div class="card-schooner">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/escuna.jpg" alt="centro historico de Paraty" />
+			<span>Escuna 3</span>
+		</div>
+		<div class="card-schooner">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/escuna.jpg" alt="centro historico de Paraty" />
+			<span>Escuna 4</span>
+		</div>
+	</div>
+</section>
+<section id="about-us">
+	<div class="img-about-us">
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/turista.png" alt="centro historico de Paraty" />
+	</div>
+	<div class="text-about-us">
+		<h2> Sobre Nós </h2>
+		<h3> Explore a deslumbrante cidade de Paraty, RJ, com Paraty Rentals & Cruises. Oferecemos casas de temporada à beira-mar e no centro histórico para uma estadia perfeita. Para aventuras inesquecíveis, embarque em nossas escunas e descubra as ilhas paradisíacas de Paraty. </h3>
+	</div>
+</section>
+<section id="house">
+	<div class="text-house">
+		<h2>
+			Nossas Casas
+		</h2>
+	</div>
+	<div class="slider-house">
+		<div class="card-house">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/casa.webp" alt="centro historico de Paraty" />
+			<span>Escuna 1</span>
+		</div>
+		<div class="card-house">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/casa.webp" alt="centro historico de Paraty" />
+			<span>Escuna 2</span>
+		</div>
+		<div class="card-house">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/casa.webp" alt="centro historico de Paraty" />
+			<span>Escuna 3</span>
+		</div>
+		<div class="card-house">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/casa.webp" alt="centro historico de Paraty" />
+			<span>Escuna 4</span>
+		</div>
+	</div>
+</section>
+<!-- <section id="count">
+	<div class="card-cound">
+		<span class="value">5+</span>
+		<span class="description">Ilhas</span>
+	</div>
+	<div class="card-cound">
+		<span class="value">5+</span>
+		<span class="description">Praias</span>
+	</div>
+	<div class="card-cound">
+		<span class="value">5+</span>
+		<span class="description">Bares</span>
+	</div>
+	<div class="card-cound">
+		<span class="value">5+</span>
+		<span class="description">Bares</span>
+	</div>
+</section> -->
 <?php
 get_footer();
