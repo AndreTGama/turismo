@@ -10,7 +10,7 @@ get_header();
 			<h2>
 				Viva momentos inesquecíveis em meio à beleza natural e à história desta cidade encantadora.
 			</h2>
-			<div id="count">
+			<!-- <div id="count">
 				<div class="card-cound">
 					<span class="value">5+</span>
 					<span class="description">Ilhas</span>
@@ -27,7 +27,7 @@ get_header();
 					<span class="value">5+</span>
 					<span class="description">Bares</span>
 				</div>
-			</div>
+			</div> -->
 		</div>
 		<div class="img-header">
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/woman-3.png" alt="centro historico de Paraty" />
@@ -94,7 +94,7 @@ get_header();
 		</div>
 	</div>
 </section>
-<!-- <section id="count">
+<section id="count">
 	<div class="card-cound">
 		<span class="value">5+</span>
 		<span class="description">Ilhas</span>
@@ -111,6 +111,21 @@ get_header();
 		<span class="value">5+</span>
 		<span class="description">Bares</span>
 	</div>
-</section> -->
+</section>
+<section id="gallery">
+	<div class="text-house">
+		<h2>
+			Galeria
+		</h2>
+		<div class="gallery-photo">
+			<img class="div1" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/cidade-vertical.png" alt="an old car">
+			<img class="div2" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/barco.webp" alt="Barco">
+			<img class="div3" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/cidade-vertical.png" alt="an old car">
+			<img class="div4" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/barco.webp" alt="Barco">
+			<img class="div5" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/praia.webp" alt="foto da praia por cima">
+			<img class="div6" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/cidade-vertical.png" alt="an old car">
+		</div>
+	</div>
+</section>
 <?php
 get_footer();
