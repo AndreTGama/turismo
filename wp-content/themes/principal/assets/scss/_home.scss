@@ -7,31 +7,86 @@
     .container-header {
         display: flex;
         justify-content: space-between;
+        padding-top: 10%;
 
         .text-header {
             width: 50%;
-            padding-top: 10%;
             h1 {
                 font-size: 3rem;
                 font-family: 'GreatVibes', sans-serif;
                 color: $black;
             }
-            h2 {
+            h3 {
                 font-size: 2rem;
                 font-family: 'GreatVibes', sans-serif;
                 color: $light_black;
                 font-weight: 100;
             }
         }
+
         .img-header {
             width: 50%;
             img {
-                width: 100%;
+                width: 350px;
+                height: 100%;
             }
             @media (max-width: 768px) {
                 display: none;
             }
         }
+        // .parallax {
+            
+        //     // height: 100vh;
+        //     // perspective: 1px;
+        //     .woman {
+        //         position: absolute;
+        //         top: 20%;
+        //         right: 0;
+        //         bottom: 0;
+        //         left: 60%;
+        //         width: 350px;
+        //         height: 400px;
+        //     }
+        //     .cloud {
+        //         position: absolute;
+        //         top: 0;
+        //         right: 0;
+        //         bottom: 0;
+        //         left: 0;
+        //         width: 200px;
+        //         height: 100px;
+        //     }
+        //     .airplane1 {
+        //         position: absolute;
+        //         top: 15%;
+        //         right: 0;
+        //         bottom: 0;
+        //         left: 65%;
+        //         width: 200px;
+        //         height: 100px;
+        //     }
+        //     .airplane2 {
+        //         position: absolute;
+        //         top: 60%;
+        //         right: 0;
+        //         bottom: 0;
+        //         left: 65%;
+        //         width: 200px;
+        //         height: 100px;
+        //     }
+        //     // .layer1 {
+        //     //     transform: translateZ(0);
+        //     // }
+
+        //     .layer5 {
+        //         transform: translateZ(-1px);
+        //     }
+
+        //     .layer6 {
+        //         transform: translateZ(-2px);
+        //     }
+        // }
+
         @media (max-width: 768px) {
             flex-direction: column;
 
@@ -110,6 +165,7 @@
     }
     .text-about-us {
         width: 50%;
+        text-align: end;
         h2 {
             font-size: 2rem;
             font-family: 'GreatVibes', sans-serif;
@@ -237,29 +293,80 @@
             filter: grayscale(100%) brightness(0.4);
             transition: filter 0.6s ease;
             cursor: pointer;
-        
+
             &:hover {
                 filter: grayscale(0) brightness(1);
             }
         }
 
-        .div1 { grid-area: 1 / 1 / 5 / 3; }
-        .div2 { grid-area: 5 / 1 / 8 / 3; }
-        .div3 { grid-area: 1 / 5 / 5 / 7; }
-        .div4 { grid-area: 5 / 5 / 8 / 7; }
-        .div5 { grid-area: 1 / 3 / 3 / 5; }
-        .div6 { grid-area: 3 / 3 / 8 / 5; }
+        .div1 {
+            grid-area: 1 / 1 / 5 / 3;
+        }
+        .div2 {
+            grid-area: 5 / 1 / 8 / 3;
+        }
+        .div3 {
+            grid-area: 1 / 5 / 5 / 7;
+        }
+        .div4 {
+            grid-area: 5 / 5 / 8 / 7;
+        }
+        .div5 {
+            grid-area: 1 / 3 / 3 / 5;
+        }
+        .div6 {
+            grid-area: 3 / 3 / 8 / 5;
+        }
     }
     @media (max-width: 768px) {
         .gallery-photo {
             grid-template-columns: 1fr;
             grid-template-rows: auto;
-            height: auto; 
+            height: auto;
         }
 
         img {
-            width: 100%; 
+            width: 100%;
             height: auto;
         }
     }
+}
+
+// Teste
+.container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 50vh;
+    width: 100%;
+}
+
+.cover {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+    }
+}
+
+.cut {
+    mask-image: url('../../svg/wave.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    mask-position: right;
+    mask-clip: content-box;
+    transition: mask-image 0.5s ease;
+}
+
+.cut:hover {
+    mask-image: none;
+    transition: mask-image 0.5s ease;
 }

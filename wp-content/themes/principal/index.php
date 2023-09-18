@@ -7,9 +7,9 @@ get_header();
 			<h1>
 				Venha conhcer Paraty!
 			</h1>
-			<h2>
+			<h3>
 				Viva momentos inesquecíveis em meio à beleza natural e à história desta cidade encantadora.
-			</h2>
+			</h3>
 			<!-- <div id="count">
 				<div class="card-cound">
 					<span class="value">5+</span>
@@ -29,8 +29,16 @@ get_header();
 				</div>
 			</div> -->
 		</div>
+		<!-- <div class="parallax">
+			<img class="parallax-layer woman layer1" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/parallax/woman-walker.png" alt="Mulher andando" />
+			<img class="parallax-layer cloud layer2" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/parallax/cloud-1.png" alt="nuvem" />
+			<img class="parallax-layer cloud layer3" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/parallax/cloud-2.png" alt="nuvem" />
+			<img class="parallax-layer cloud layer4" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/parallax/cloud-3.png" alt="nuvem" />
+			<img class="parallax-layer airplane1 layer5" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/parallax/airplane-1.png" alt="avião de papel" />
+			<img class="parallax-layer airplane2 layer6" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/parallax/airplane-2.png" alt="avião de papel" />
+		</div> -->
 		<div class="img-header">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/woman-3.png" alt="centro historico de Paraty" />
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/woman-walk.png" alt="centro historico de Paraty" />
 		</div>
 	</div>
 	<div class="divisor"></div>
@@ -127,5 +135,16 @@ get_header();
 		</div>
 	</div>
 </section>
+<!-- TODO testes para aplicar video no header -->
+<!-- <section id="video">
+	<div class="container">
+		<div class="cover cut">
+			<video autoplay muted loop>
+				<source src="<?php echo get_template_directory_uri(); ?>/assets/video/paraty.mp4" type="video/mp4">
+			</video>
+		</div>
+	</div>
+</section> -->
+
 <?php
 get_footer();
