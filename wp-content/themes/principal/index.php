@@ -29,14 +29,6 @@ get_header();
 				</div>
 			</div> -->
 		</div>
-		<!-- <div class="parallax">
-			<img class="parallax-layer woman layer1" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/parallax/woman-walker.png" alt="Mulher andando" />
-			<img class="parallax-layer cloud layer2" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/parallax/cloud-1.png" alt="nuvem" />
-			<img class="parallax-layer cloud layer3" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/parallax/cloud-2.png" alt="nuvem" />
-			<img class="parallax-layer cloud layer4" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/parallax/cloud-3.png" alt="nuvem" />
-			<img class="parallax-layer airplane1 layer5" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/parallax/airplane-1.png" alt="avião de papel" />
-			<img class="parallax-layer airplane2 layer6" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/parallax/airplane-2.png" alt="avião de papel" />
-		</div> -->
 		<div class="img-header">
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/woman-walk.png" alt="centro historico de Paraty" />
 		</div>
@@ -50,7 +42,7 @@ get_header();
 		</h2>
 	</div>
 	<div class="slider-schooner">
-		<div class="card-schooner">
+		<div class="card-schooner" id="myBtn">
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/escuna.jpg" alt="centro historico de Paraty" />
 			<span>Escuna 1</span>
 		</div>
@@ -135,6 +127,87 @@ get_header();
 		</div>
 	</div>
 </section>
+<section id="modal">
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<div class="content">
+				<div class="gallery">
+					<div class="gallery__item">
+						<input type="radio" id="img-1" checked name="gallery" class="gallery__selector" />
+						<img class="gallery__img" src="https://picsum.photos/id/1015/600/400.jpg" alt="" />
+						<label for="img-1" class="gallery__thumb"><img src="https://picsum.photos/id/1015/150/100.jpg" alt="" /></label>
+					</div>
+					<div class="gallery__item">
+						<input type="radio" id="img-2" name="gallery" class="gallery__selector" />
+						<img class="gallery__img" src="https://picsum.photos/id/1039/600/400.jpg" alt="" />
+						<label for="img-2" class="gallery__thumb"><img src="https://picsum.photos/id/1039/150/100.jpg" alt="" /></label>
+					</div>
+					<div class="gallery__item">
+						<input type="radio" id="img-3" name="gallery" class="gallery__selector" />
+						<img class="gallery__img" src="https://picsum.photos/id/1057/600/400.jpg" alt="" />
+						<label for="img-3" class="gallery__thumb"><img src="https://picsum.photos/id/1057/150/100.jpg" alt="" /></label>
+					</div>
+					<div class="gallery__item">
+						<input type="radio" id="img-4" name="gallery" class="gallery__selector" />
+						<img class="gallery__img" src="https://picsum.photos/id/106/600/400.jpg" alt="" />
+						<label for="img-4" class="gallery__thumb"><img src="https://picsum.photos/id/106/150/100.jpg" alt="" /></label>
+					</div>
+				</div>
+				<div class="information">
+					<h2> Escuna 1</h2>
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod est iure mollitia atque similique ipsum, officia laborum tempora incidunt illo, dignissimos, rerum esse corrupti itaque eligendi quidem repellat natus asperiores.</p>
+					<hr />
+					<div class="characteristics">
+						<div class="chatacteristic-cards">
+							<div class="card">
+								<span>Pessoas</span>
+								<span>5</span>
+							</div>
+							<div class="card">
+								<span>Pessoas</span>
+								<span>5</span>
+							</div>
+						</div>
+						<div class="chatacteristic-cards">
+							<div class="card">
+								<span>Pessoas</span>
+								<span>5</span>
+							</div>
+							<div class="card">
+								<span>Pessoas</span>
+								<span>5</span>
+							</div>
+						</div>
+					</div>
+					<div class="links-contact">
+						<a href="https://wa.me/5524999999999?text=Eu+gostaria+de+entender+mais+sobre+o+processo+de+trabalho+de+voc%C3%AAs." target="_blank">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/whatsapp.png" alt="logo do whatsApp">
+						</a>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+<script>
+	var modal = document.getElementById("myModal");
+	var btn = document.getElementById("myBtn");
+	var span = document.getElementsByClassName("close")[0];
+	btn.onclick = function() {
+		modal.style.display = "block";
+	}
+	span.onclick = function() {
+		modal.style.display = "none";
+	}
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
+</script>
 <!-- TODO testes para aplicar video no header -->
 <!-- <section id="video">
 	<div class="container">
