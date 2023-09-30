@@ -54,5 +54,8 @@
 <?php wp_footer(); ?>
 
 </body>
-
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/dist/js/modal-house.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/dist/js/modal-schooner.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/dist/js/scroll.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/dist/js/count.js"></script>
 </html>

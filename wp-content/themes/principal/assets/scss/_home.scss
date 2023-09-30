@@ -181,7 +181,7 @@
         align-items: center;
         justify-content: center;
         .value {
-            color: $value;
+            color: $yellow;
             font-size: 2rem;
             font-weight: bold;
         }
@@ -203,7 +203,7 @@
     //     align-items: center;
     //     justify-content: center;
     //     .value {
-    //         color: $value;
+    //         color: $yellow;
     //         font-size: 1.5rem;
     //         font-weight: bold;
     //     }
@@ -226,17 +226,38 @@
             display: flex;
             flex-direction: column;
             text-align: center;
-            img {
-                border-radius: 10%;
-                width: 250px;
-                height: 200px;
-            }
             span {
                 margin-top: 15px;
                 font-size: 1rem;
-                font-family: 'Latos', sans-serif;
+                font-family: Latos, sans-serif;
                 color: $black;
                 font-weight: 100;
+            }
+            img {
+                --s: 15px;
+                --b: 2px;
+                --w: 200px;
+                --c: #f1a414;
+
+                width: var(--w);
+                aspect-ratio: 1;
+                object-fit: cover;
+                padding: calc(2 * var(--s));
+                --_g: var(--c) var(--b), #0000 0 calc(100% - var(--b)),
+                    var(--c) 0;
+                background: linear-gradient(var(--_g)) 50%/100% var(--_i, 100%)
+                        no-repeat,
+                    linear-gradient(90deg, var(--_g)) 50% / var(--_i, 100%) 100%
+                        no-repeat;
+                transition: 0.4s;
+                cursor: pointer;
+                outline: calc(var(--w) / 2) solid #0009;
+                outline-offset: calc(var(--w) / -2 - 2 * var(--s));
+            }
+            img:hover {
+                outline: var(--b) solid var(--c);
+                outline-offset: calc(var(--s) / -2);
+                --_i: calc(100% - 2 * var(--s));
             }
         }
     }
@@ -301,7 +322,8 @@
     }
 }
 
-#modal {
+#modal-schooner,
+#modal-house {
     .modal {
         display: none;
         position: fixed;
@@ -327,7 +349,9 @@
         img {
             max-width: 100%;
             vertical-align: top;
+            cursor: pointer;
         }
+
         .content {
             display: flex;
             justify-content: space-around;
@@ -378,7 +402,7 @@
                         display: flex;
                         justify-content: space-between;
                         .card {
-                            width: 150px;
+                            width: 100%;
                             height: 75px;
                             background-color: #f1f0fd;
                             border: 2px solid #dfdfdf;
@@ -389,6 +413,12 @@
                             align-items: center;
                             justify-content: center;
                             margin: 5px;
+
+                            img {
+                                width: 30px;
+                                height: 30px;
+                                margin-bottom: 5px;
+                            }
                         }
                     }
                 }
