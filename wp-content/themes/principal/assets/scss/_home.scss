@@ -169,32 +169,10 @@
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
-    .card-cound {
-        width: 290px;
-        height: 150px;
-        background-color: $body;
-        border: 2px solid #dfdfdf;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        .value {
-            color: $yellow;
-            font-size: 2rem;
-            font-weight: bold;
-        }
-        .description {
-            margin-top: 10px;
-            font-size: 1.5rem;
-        }
-    }
-    // TODO no header
     // .card-cound {
-    //     width: 100px;
-    //     height: 80px;
-    //     background-color: transparent;
+    //     width: 290px;
+    //     height: 150px;
+    //     background-color: $body;
     //     border: 2px solid #dfdfdf;
     //     border-radius: 10px;
     //     display: flex;
@@ -204,14 +182,36 @@
     //     justify-content: center;
     //     .value {
     //         color: $yellow;
-    //         font-size: 1.5rem;
+    //         font-size: 2rem;
     //         font-weight: bold;
     //     }
     //     .description {
     //         margin-top: 10px;
-    //         font-size: 1rem;
+    //         font-size: 1.5rem;
     //     }
     // }
+    // TODO no header
+    .card-cound {
+        width: 100px;
+        height: 80px;
+        background-color: #c1c0c047;
+        border: 2px solid #dfdfdf;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        .value {
+            color: $yellow;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .description {
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+    }
 }
 
 #house {

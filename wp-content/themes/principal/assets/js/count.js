@@ -11,5 +11,13 @@ function animateValue(obj, start, end, duration) {
     window.requestAnimationFrame(step);
 }
 
-const obj = document.getElementById('value');
-animateValue(obj, 0, 100, 5000);
+document.addEventListener('DOMContentLoaded', function () {
+    const island = document.getElementById('island-value');
+    const beachs = document.getElementById('beachs-value');
+    const waterfall = document.getElementById('waterfall-value');
+    const alembic = document.getElementById('alembic-value');
+    animateValue(island, 0, 65, 4000);
+    animateValue(beachs, 0, 60, 4000);
+    animateValue(waterfall, 0, 19, 4000);
+    animateValue(alembic, 0, 100, 4000);
+});

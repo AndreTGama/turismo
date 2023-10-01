@@ -7,6 +7,10 @@
 	<meta name="description" content="Encontre as melhores casas para alugar e passeios de escuna em Paraty. Explore as belezas naturais desta cidade histórica no litoral do Rio de Janeiro.">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/dist/css/index.css" />
+	<!-- Magnific -->
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/dist/css/magnific-popup.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/dist/js/jquery.magnific-popup.js"></script>
 </head>
 
 <body>

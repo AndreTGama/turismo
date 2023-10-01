@@ -10,24 +10,33 @@ get_header();
 			<h3>
 				Viva momentos inesquecíveis em meio à beleza natural e à história desta cidade encantadora.
 			</h3>
-			<!-- <div id="count">
+			<div id="count">
 				<div class="card-cound">
-					<span class="value">5+</span>
+					<div class="value" id="island-value">65</div>
 					<span class="description">Ilhas</span>
 				</div>
 				<div class="card-cound">
-					<span class="value">5+</span>
+					<span class="value">
+						<span>+ </span>
+						<span id="beachs-value">60</span>
+					</span>
 					<span class="description">Praias</span>
 				</div>
 				<div class="card-cound">
-					<span class="value">5+</span>
-					<span class="description">Bares</span>
+					<span class="value">
+						<span>+ </span>
+						<span id="waterfall-value" >19</span>
+					</span>
+					<span class="description">Cachoeiras</span>
 				</div>
 				<div class="card-cound">
-					<span class="value">5+</span>
-					<span class="description">Bares</span>
+					<span class="value">
+						<span>+ </span>
+						<span id="alembic-value">100</span>
+					</span>
+					<span class="description">Alambiques</span>
 				</div>
-			</div> -->
+			</div>
 		</div>
 		<div id="header-img" class="img-header js-scroll slide-right">
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/woman-walk.png" alt="centro historico de Paraty" />
@@ -76,7 +85,7 @@ get_header();
 		</h2>
 	</div>
 	<div class="slider-house">
-		<div class="card-house"  id="myBtnHouse">
+		<div class="card-house" id="myBtnHouse">
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/casa.webp" alt="centro historico de Paraty" />
 			<span>Escuna 1</span>
 		</div>
@@ -94,9 +103,9 @@ get_header();
 		</div>
 	</div>
 </section>
-<section id="count" class="js-scroll fade-in">
+<!-- <section id="count" class="js-scroll fade-in">
 	<div class="card-cound">
-		<span id="value" class="value">1000	+</span>
+		<span id="value" class="value">1000 +</span>
 		<span class="description">Ilhas</span>
 	</div>
 	<div class="card-cound">
@@ -111,19 +120,31 @@ get_header();
 		<span class="value">5+</span>
 		<span class="description">Bares</span>
 	</div>
-</section>
+</section> -->
 <section id="gallery" class="js-scroll fade-in">
 	<div class="text-house">
 		<h2>
 			Galeria
 		</h2>
-		<div class="gallery-photo">
-			<img class="div1" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/cidade-vertical.png" alt="an old car">
-			<img class="div2" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/barco.webp" alt="Barco">
-			<img class="div3" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/cidade-vertical.png" alt="an old car">
-			<img class="div4" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/barco.webp" alt="Barco">
-			<img class="div5" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/praia.webp" alt="foto da praia por cima">
-			<img class="div6" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/cidade-vertical.png" alt="an old car">
+		<div class="gallery-photo image-link">
+			<a class="div1" href="<?php echo get_template_directory_uri(); ?>/assets/dist/images/barco.webp">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/cidade-vertical.png" alt="an old car">
+			</a>
+			<a class="div2" href="<?php echo get_template_directory_uri(); ?>/assets/dist/images/barco.webp">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/barco.webp" alt="Barco">
+			</a>
+			<a class="div3" href="<?php echo get_template_directory_uri(); ?>/assets/dist/images/cidade-vertical.png">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/cidade-vertical.png" alt="an old car">
+			</a>
+			<a class="div4" href="<?php echo get_template_directory_uri(); ?>/assets/dist/images/barco.webp">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/barco.webp" alt="an old car">
+			</a>
+			<a class="div5" href="<?php echo get_template_directory_uri(); ?>/assets/dist/images/praia.webp">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/praia.webp" alt="an old car">
+			</a>
+			<a class="div6" href="<?php echo get_template_directory_uri(); ?>/assets/dist/images/cidade-vertical.png">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/cidade-vertical.png" alt="an old car">
+			</a>
 		</div>
 	</div>
 </section>
@@ -132,25 +153,34 @@ get_header();
 		<div class="modal-content">
 			<span id="closeSchooner" class="close">&times;</span>
 			<div class="content">
-				<div class="gallery">
+				<div class="gallery gallery-schooner">
 					<div class="gallery__item">
 						<input type="radio" id="img-1" checked name="gallery" class="gallery__selector" />
-						<img class="gallery__img" src="https://picsum.photos/id/1015/600/400.jpg" alt="" />
+						<a href="https://picsum.photos/id/1015/600/400.jpg" class="gallery__img">
+							<img src="https://picsum.photos/id/1015/600/400.jpg" alt="" />
+						</a>
 						<label for="img-1" class="gallery__thumb"><img src="https://picsum.photos/id/1015/150/100.jpg" alt="" /></label>
 					</div>
 					<div class="gallery__item">
 						<input type="radio" id="img-2" name="gallery" class="gallery__selector" />
-						<img class="gallery__img" src="https://picsum.photos/id/1039/600/400.jpg" alt="" />
+						<a class="gallery__img" href="https://picsum.photos/id/1039/600/400.jpg">
+							<img src="https://picsum.photos/id/1039/600/400.jpg" alt="" />
+						</a>
 						<label for="img-2" class="gallery__thumb"><img src="https://picsum.photos/id/1039/150/100.jpg" alt="" /></label>
 					</div>
 					<div class="gallery__item">
 						<input type="radio" id="img-3" name="gallery" class="gallery__selector" />
-						<img class="gallery__img" src="https://picsum.photos/id/1057/600/400.jpg" alt="" />
+						<a class="gallery__img" href="https://picsum.photos/id/1057/600/400.jpg">
+							<img src="https://picsum.photos/id/1057/600/400.jpg" alt="" />
+
+						</a>
 						<label for="img-3" class="gallery__thumb"><img src="https://picsum.photos/id/1057/150/100.jpg" alt="" /></label>
 					</div>
 					<div class="gallery__item">
 						<input type="radio" id="img-4" name="gallery" class="gallery__selector" />
-						<img class="gallery__img" src="https://picsum.photos/id/106/600/400.jpg" alt="" />
+						<a href="https://picsum.photos/id/106/600/400.jpg" class="gallery__img">
+							<img src="https://picsum.photos/id/106/600/400.jpg" alt="" />
+						</a>
 						<label for="img-4" class="gallery__thumb"><img src="https://picsum.photos/id/106/150/100.jpg" alt="" /></label>
 					</div>
 				</div>
