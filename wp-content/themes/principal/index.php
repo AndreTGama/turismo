@@ -1,4 +1,33 @@
 <?php
+
+/**
+ * Template Name: Home Page
+ */
+$argsTours = array(
+	'post_type' => 'tours',
+	'posts_per_page' => -1,
+);
+
+$tours = get_posts($argsTours);
+$toursArray = [];
+
+foreach ($tours as $tour) {
+	$images = get_field('images', $tour->ID);
+
+	$trip = [
+		"id" => $tour->ID,
+		"name" => get_field('name', $tour->ID),
+		"description" => get_field('description', $tour->ID),
+		"people" => get_field('people', $tour->ID),
+		"islands" => get_field('islands', $tour->ID),
+		"time" => get_field('time', $tour->ID),
+		"snack" => get_field('snack', $tour->ID) ? 'Sim' : 'Não',
+		"images" => $images,
+		"img" => $images['first_image']['url']
+	];
+	array_push($toursArray, $trip);
+}
+
 get_header();
 ?>
 <section id="header">
@@ -25,7 +54,7 @@ get_header();
 				<div class="card-cound">
 					<span class="value">
 						<span>+ </span>
-						<span id="waterfall-value" >19</span>
+						<span id="waterfall-value">19</span>
 					</span>
 					<span class="description">Cachoeiras</span>
 				</div>
@@ -47,26 +76,95 @@ get_header();
 <section id="schooner" class="js-scroll fade-in">
 	<div class="text-schooner ">
 		<h2>
-			Nossas Escunas
+			Nossos Passeios
 		</h2>
+		<a href="/"> Ver mais</a>
 	</div>
 	<div class="slider-schooner">
-		<div class="card-schooner" id="myBtnSchooner">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/escuna.jpg" alt="centro historico de Paraty" />
-			<span>Escuna 1</span>
-		</div>
-		<div class="card-schooner">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/escuna.jpg" alt="centro historico de Paraty" />
-			<span>Escuna 2</span>
-		</div>
-		<div class="card-schooner">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/escuna.jpg" alt="centro historico de Paraty" />
-			<span>Escuna 3</span>
-		</div>
-		<div class="card-schooner">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/escuna.jpg" alt="centro historico de Paraty" />
-			<span>Escuna 4</span>
-		</div>
+		<?php
+		foreach ($toursArray as $i) {
+			$jsonData = json_encode($i, JSON_UNESCAPED_UNICODE);
+		?>
+			<div class="card-schooner" onclick="openModalSchooner(<?= $i['id'] ?>)">
+				<img src="<?= $i['img'] ?>" alt="<?= $i['name'] ?>" />
+				<span><?= $i['name'] ?></span>
+			</div>
+			<div id="modal-schooner">
+				<div id="myModalSchooner-<?= $i['id']?>" class="modal">
+					<div class="modal-content">
+						<span id="closeSchooner" onclick="closeModalSchooner(<?= $i['id'] ?>)" class="close">&times;</span>
+						<div class="content">
+							<div class="gallery gallery-schooner">
+								<div class="gallery__item">
+									<input type="radio" id="img-1" checked name="gallery" class="gallery__selector" />
+									<a href="https://picsum.photos/id/1015/600/400.jpg" class="gallery__img">
+										<img src="https://picsum.photos/id/1015/600/400.jpg" alt="" />
+									</a>
+									<label for="img-1" class="gallery__thumb"><img src="https://picsum.photos/id/1015/150/100.jpg" alt="" /></label>
+								</div>
+								<div class="gallery__item">
+									<input type="radio" id="img-2" name="gallery" class="gallery__selector" />
+									<a class="gallery__img" href="https://picsum.photos/id/1039/600/400.jpg">
+										<img src="https://picsum.photos/id/1039/600/400.jpg" alt="" />
+									</a>
+									<label for="img-2" class="gallery__thumb"><img src="https://picsum.photos/id/1039/150/100.jpg" alt="" /></label>
+								</div>
+								<div class="gallery__item">
+									<input type="radio" id="img-3" name="gallery" class="gallery__selector" />
+									<a class="gallery__img" href="https://picsum.photos/id/1057/600/400.jpg">
+										<img src="https://picsum.photos/id/1057/600/400.jpg" alt="" />
+
+									</a>
+									<label for="img-3" class="gallery__thumb"><img src="https://picsum.photos/id/1057/150/100.jpg" alt="" /></label>
+								</div>
+								<div class="gallery__item">
+									<input type="radio" id="img-4" name="gallery" class="gallery__selector" />
+									<a href="https://picsum.photos/id/106/600/400.jpg" class="gallery__img">
+										<img src="https://picsum.photos/id/106/600/400.jpg" alt="" />
+									</a>
+									<label for="img-4" class="gallery__thumb"><img src="https://picsum.photos/id/106/150/100.jpg" alt="" /></label>
+								</div>
+							</div>
+							<div class="information">
+								<h2><?= $i['name'] ?></h2>
+								<p><?= $i['description'] ?></p>
+								<hr />
+								<div class="characteristics">
+									<div class="chatacteristic-cards">
+										<div class="card">
+											<img title="Qauntidade de pessoas" alt="icone de pessoas" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/crowd.png" />
+											<span><?= $i['people'] ?></span>
+										</div>
+										<div class="card">
+											<img title="Ilhas" alt="icone de uma ilha" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/island-on-water.png" />
+											<span><?= $i['islands'] ?></span>
+										</div>
+									</div>
+									<div class="chatacteristic-cards">
+										<div class="card">
+											<img title="Tempo de passeio" alt="icone de uma relógio" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/time.png" />
+											<span><?= $i['time'] ?></span>
+										</div>
+										<div class="card">
+											<img title="Restaurante" alt="icone de uma restaurante" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/food.png" />
+											<span><?= $i['snack'] ?></span>
+										</div>
+									</div>
+								</div>
+								<div class="links-contact">
+									<a href="https://wa.me/5524999999999?text=Eu+gostaria+de+entender+mais+sobre+o+processo+de+trabalho+de+voc%C3%AAs." target="_blank">
+										<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/whatsapp.png" alt="logo do whatsApp">
+									</a>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<?php
+		}
+		?>
 	</div>
 </section>
 <section id="about-us">
