@@ -83,7 +83,7 @@
             color: $blue;
             font-weight: 100;
             &:hover {
-                color: $dark_blue
+                color: $dark_blue;
             }
         }
     }
@@ -97,11 +97,12 @@
             flex-direction: column;
             text-align: center;
             margin-right: 60px;
+            cursor: pointer;
+            color: $black;
             span {
                 margin-top: 15px;
                 font-size: 1rem;
                 font-family: Latos, sans-serif;
-                color: $black;
                 font-weight: 100;
             }
             img {
@@ -121,14 +122,17 @@
                     linear-gradient(90deg, var(--_g)) 50% / var(--_i, 100%) 100%
                         no-repeat;
                 transition: 0.4s;
-                cursor: pointer;
                 outline: calc(var(--w) / 2) solid #0009;
                 outline-offset: calc(var(--w) / -2 - 2 * var(--s));
             }
-            img:hover {
-                outline: var(--b) solid var(--c);
-                outline-offset: calc(var(--s) / -2);
-                --_i: calc(100% - 2 * var(--s));
+
+            &:hover {
+                color: $dark_blue;
+                img {
+                    outline: var(--b) solid var(--c);
+                    outline-offset: calc(var(--s) / -2);
+                    --_i: calc(100% - 2 * var(--s));
+                }
             }
         }
     }
@@ -370,52 +374,26 @@
             padding-top: 20px;
 
             .gallery {
-                display: flex;
-                margin: 10px auto;
-                max-width: 400px;
-                position: relative;
-                margin-bottom: 30px;
-                padding-top: 280px;
-
-                &__img {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    opacity: 0;
-                    transition: opacity 0.3s ease-in-out;
-                }
-
-                &__thumb {
-                    padding-top: 6px;
-                    margin: 6px;
-                    display: block;
-                }
-
-                &__selector {
-                    position: absolute;
-                    opacity: 0;
-                    visibility: hidden;
-
-                    &:checked {
-                        + .gallery__img {
-                            opacity: 1;
-                        }
-                        ~ .gallery__thumb > img {
-                            box-shadow: 0 0 0 3px #0be2f6;
-                        }
-                    }
+                width: 45%;
+                @media (max-width: 768px) {
+                    width: 100%;
                 }
             }
 
             .information {
                 width: 50%;
+                text-align: center;
+                p {
+                    font-size: 14px;
+                    text-align: justify;
+                }
                 .characteristics {
                     .chatacteristic-cards {
                         display: flex;
                         justify-content: space-between;
                         .card {
                             width: 100%;
-                            height: 75px;
+                            height: 70px;
                             background-color: #f1f0fd;
                             border: 2px solid #dfdfdf;
                             border-radius: 10px;
@@ -434,17 +412,23 @@
                         }
                     }
                 }
-                .links-contact {
-                    text-align: end;
-                    margin-top: 10px;
-                    img {
-                        width: 32px;
-                        height: 32px;
-                    }
+                @media (max-width: 768px) {
+                    width: 100%;
+                    margin-bottom: 30px;
                 }
             }
+
             @media (max-width: 768px) {
-                flex-direction: column;
+                flex-direction: column-reverse;
+            }
+        }
+        .links-contact {
+            text-align: end;
+            margin-top: 15px;
+            margin-right: 30px;
+            img {
+                width: 32px;
+                height: 32px;
             }
         }
     }
