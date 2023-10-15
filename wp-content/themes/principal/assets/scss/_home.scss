@@ -1,5 +1,4 @@
 #header {
-    padding: 0 5%;
     background-image: url('../images/life-original-10.png');
     background-size: cover;
     text-align: center;
@@ -7,7 +6,7 @@
     .container-header {
         display: flex;
         justify-content: space-between;
-        padding-top: 10%;
+        padding: 10% 5% 5% 5%;
 
         .text-header {
             width: 50%;
