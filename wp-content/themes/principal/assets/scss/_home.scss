@@ -252,7 +252,7 @@
     .slider-house {
         margin-top: 30px;
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         flex-wrap: wrap;
 
         .card-house {
@@ -261,7 +261,6 @@
             flex-direction: column;
             text-align: center;
             color: $black;
-            margin-right: 60px;
             span {
                 margin-top: 15px;
                 font-size: 1rem;
@@ -299,7 +298,6 @@
             }
         }
         @media (max-width: 1066px) {
-            justify-content: space-between;
             .card-house {
                 margin-right: 0;
                 margin-bottom: 30px;
