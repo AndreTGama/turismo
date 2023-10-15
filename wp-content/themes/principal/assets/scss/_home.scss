@@ -52,13 +52,13 @@
     }
 }
 
-#schooner {
+#trip {
     padding: 0 5%;
     margin-top: 30px;
-    .text-schooner {
+    .text-trip {
         display: flex;
         justify-content: space-between;
-        align-items: end;
+        align-items: center;
         h2 {
             font-size: 2rem;
             font-family: 'GreatVibes', sans-serif;
@@ -86,13 +86,16 @@
                 color: $dark_blue;
             }
         }
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
     }
 
-    .slider-schooner {
+    .slider-trip {
         margin-top: 30px;
         display: flex;
         justify-content: flex-start;
-        .card-schooner {
+        .card-trip {
             display: flex;
             flex-direction: column;
             text-align: center;
@@ -134,6 +137,19 @@
                     --_i: calc(100% - 2 * var(--s));
                 }
             }
+        }
+
+        @media (max-width: 1066px) {
+            justify-content: space-between;
+            .card-trip {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
         }
     }
 }
@@ -178,54 +194,53 @@
             text-align: justify;
         }
     }
+    @media (max-width: 768px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        .img-about-us {
+            width: 100%;
+        }
+        .text-about-us {
+            width: 100%;
+            text-align: center;
+        }
+    }
 }
 
 #count {
     padding: 0 5%;
     margin-top: 30px;
     display: flex;
-    justify-content: space-between;
-    // .card-cound {
-    //     width: 290px;
-    //     height: 150px;
-    //     background-color: $body;
-    //     border: 2px solid #dfdfdf;
-    //     border-radius: 10px;
-    //     display: flex;
-    //     flex-direction: column;
-    //     text-align: center;
-    //     align-items: center;
-    //     justify-content: center;
-    //     .value {
-    //         color: $yellow;
-    //         font-size: 2rem;
-    //         font-weight: bold;
-    //     }
-    //     .description {
-    //         margin-top: 10px;
-    //         font-size: 1.5rem;
-    //     }
-    // }
-    // TODO no header
-    .card-cound {
-        width: 100px;
-        height: 80px;
-        background-color: #c1c0c047;
-        border: 2px solid #dfdfdf;
-        border-radius: 10px;
+    justify-content: center;
+    .double-card-count {
         display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        .value {
-            color: $yellow;
-            font-size: 1.5rem;
-            font-weight: bold;
+        justify-content: space-between;
+        .card-count {
+            width: 100px;
+            height: 80px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            background-color: #c1c0c047;
+            border: 2px solid #dfdfdf;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            .value {
+                color: $yellow;
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+            .description {
+                margin-top: 10px;
+                font-size: 1rem;
+            }
         }
-        .description {
-            margin-top: 10px;
-            font-size: 1rem;
+        @media (max-width: 768px) {
+            flex-direction: column;
         }
     }
 }
@@ -237,16 +252,20 @@
     .slider-house {
         margin-top: 30px;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
         .card-house {
+            cursor: pointer;
             display: flex;
             flex-direction: column;
             text-align: center;
+            color: $black;
+            margin-right: 60px;
             span {
                 margin-top: 15px;
                 font-size: 1rem;
                 font-family: Latos, sans-serif;
-                color: $black;
                 font-weight: 100;
             }
             img {
@@ -254,7 +273,6 @@
                 --b: 2px;
                 --w: 200px;
                 --c: #f1a414;
-
                 width: var(--w);
                 aspect-ratio: 1;
                 object-fit: cover;
@@ -266,15 +284,31 @@
                     linear-gradient(90deg, var(--_g)) 50% / var(--_i, 100%) 100%
                         no-repeat;
                 transition: 0.4s;
-                cursor: pointer;
                 outline: calc(var(--w) / 2) solid #0009;
                 outline-offset: calc(var(--w) / -2 - 2 * var(--s));
             }
-            img:hover {
-                outline: var(--b) solid var(--c);
-                outline-offset: calc(var(--s) / -2);
-                --_i: calc(100% - 2 * var(--s));
+            &:hover {
+                span {
+                    color: $yellow;
+                }
+                img {
+                    outline: var(--b) solid var(--c);
+                    outline-offset: calc(var(--s) / -2);
+                    --_i: calc(100% - 2 * var(--s));
+                }
             }
+        }
+        @media (max-width: 1066px) {
+            justify-content: space-between;
+            .card-house {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
         }
     }
 }
@@ -325,6 +359,7 @@
         }
     }
     @media (max-width: 768px) {
+        text-align: center;
         .gallery-photo {
             grid-template-columns: 1fr;
             grid-template-rows: auto;
@@ -338,15 +373,15 @@
     }
 }
 
-#modal-schooner,
+#modal-trip,
 #modal-house {
     .modal {
         display: none;
         position: fixed;
-        z-index: 1;
+        z-index: 1000;
         padding-top: 30px;
         left: 0;
-        top: 0;
+        top: 10px;
         width: 100%;
         height: 100%;
         overflow: auto;

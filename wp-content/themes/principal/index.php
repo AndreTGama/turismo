@@ -86,30 +86,34 @@ get_header();
 				Viva momentos inesquecíveis em meio à beleza natural e à história desta cidade encantadora.
 			</h3>
 			<div id="count">
-				<div class="card-cound">
-					<div class="value" id="island-value">65</div>
-					<span class="description">Ilhas</span>
+				<div class="double-card-count">
+					<div class="card-count">
+						<div class="value" id="island-value">65</div>
+						<span class="description">Ilhas</span>
+					</div>
+					<div class="card-count">
+						<span class="value">
+							<span>+ </span>
+							<span id="beachs-value">60</span>
+						</span>
+						<span class="description">Praias</span>
+					</div>
 				</div>
-				<div class="card-cound">
-					<span class="value">
-						<span>+ </span>
-						<span id="beachs-value">60</span>
-					</span>
-					<span class="description">Praias</span>
-				</div>
-				<div class="card-cound">
-					<span class="value">
-						<span>+ </span>
-						<span id="waterfall-value">19</span>
-					</span>
-					<span class="description">Cachoeiras</span>
-				</div>
-				<div class="card-cound">
-					<span class="value">
-						<span>+ </span>
-						<span id="alembic-value">100</span>
-					</span>
-					<span class="description">Alambiques</span>
+				<div class="double-card-count">
+					<div class="card-count">
+						<span class="value">
+							<span>+ </span>
+							<span id="waterfall-value">19</span>
+						</span>
+						<span class="description">Cachoeiras</span>
+					</div>
+					<div class="card-count">
+						<span class="value">
+							<span>+ </span>
+							<span id="alembic-value">100</span>
+						</span>
+						<span class="description">Alambiques</span>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -119,26 +123,26 @@ get_header();
 	</div>
 	<div class="divisor"></div>
 </section>
-<section id="schooner" class="js-scroll fade-in">
-	<div class="text-schooner ">
+<section id="trip">
+	<div class="text-trip js-scroll fade-in">
 		<h2>
 			Nossos Passeios
 		</h2>
 		<a href="/"> Ver mais</a>
 	</div>
-	<div class="slider-schooner">
+	<div class="slider-trip">
 		<?php
 		foreach ($toursArray as $i) {
 			$jsonData = json_encode($i, JSON_UNESCAPED_UNICODE);
 		?>
-			<div class="card-schooner" onclick="openModalSchooner(<?= $i['id'] ?>)">
+			<div class="card-trip js-scroll fade-in" onclick="openModalTrip(<?= $i['id'] ?>)">
 				<img src="<?= $i['img'] ?>" alt="<?= $i['name'] ?>" />
 				<span><?= $i['name'] ?></span>
 			</div>
-			<div id="modal-schooner">
-				<div id="myModalSchooner-<?= $i['id'] ?>" class="modal">
+			<div id="modal-trip">
+				<div id="myModalTrip-<?= $i['id'] ?>" class="modal">
 					<div class="modal-content">
-						<span id="closeSchooner" onclick="closeModalSchooner(<?= $i['id'] ?>)" class="close">&times;</span>
+						<span id="closetrip" onclick="closeModalTrip(<?= $i['id'] ?>)" class="close">&times;</span>
 						<div class="content">
 							<div class="gallery">
 								<div class="fotorama" data-nav="thumbs" data-fit="cover" data-loop="true" data-allowfullscreen="true">
@@ -197,8 +201,8 @@ get_header();
 		<h3> Explore a deslumbrante cidade de Paraty, RJ, com Paraty Rentals & Cruises. Oferecemos casas de temporada à beira-mar e no centro histórico para uma estadia perfeita. Para aventuras inesquecíveis, embarque em nossas escunas e descubra as ilhas paradisíacas de Paraty. </h3>
 	</div>
 </section>
-<section id="house" class="js-scroll fade-in">
-	<div class="text-house">
+<section id="house">
+	<div class="text-house js-scroll fade-in">
 		<h2>
 			Nossas Casas
 		</h2>
@@ -208,14 +212,14 @@ get_header();
 		foreach ($homesArray as $i) {
 			$jsonData = json_encode($i, JSON_UNESCAPED_UNICODE);
 		?>
-			<div class="card-house" id="myBtnHouse">
+			<div class="card-house js-scroll fade-in" onclick="openModalHouse(<?= $i['id'] ?>)">
 				<img src="<?= $i['img'] ?>" alt="<?= $i['name'] ?>" />
 				<span><?= $i['name'] ?></span>
 			</div>
-			<div id="modal-schooner">
-				<div id="myModalSchooner-<?= $i['id'] ?>" class="modal">
+			<div id="modal-house">
+				<div id="myModalHouse-<?= $i['id'] ?>" class="modal">
 					<div class="modal-content">
-						<span id="closeSchooner" onclick="closeModalSchooner(<?= $i['id'] ?>)" class="close">&times;</span>
+						<span id="closeHouse" onclick="closeModalHouse(<?= $i['id'] ?>)" class="close">&times;</span>
 						<div class="content">
 							<div class="gallery">
 								<div class="fotorama" data-nav="thumbs" data-fit="cover" data-loop="true" data-allowfullscreen="true">
@@ -231,24 +235,25 @@ get_header();
 								<div class="characteristics">
 									<div class="chatacteristic-cards">
 										<div class="card">
-											<img title="Qauntidade de pessoas" alt="icone de pessoas" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/crowd.png" />
-											<span><?= $i['people'] ?></span>
+											<img title="Ar Condicionado" alt="ícone do ar condicionado" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/air-conditioning.png" />
+											<span><?= $i['airconditioning'] ?></span>
 										</div>
 										<div class="card">
-											<img title="Ilhas" alt="icone de uma ilha" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/island-on-water.png" />
-											<span><?= $i['islands'] ?></span>
+											<img title="Qauntidade de pessoas" alt="icone de pessoas" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/crowd.png" />
+											<span><?= $i['people'] ?></span>
 										</div>
 									</div>
 									<div class="chatacteristic-cards">
 										<div class="card">
-											<img title="Tempo de passeio" alt="icone de uma relógio" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/time.png" />
-											<span><?= $i['time'] ?></span>
+											<img title="Piscina" alt="ícone de uma piscina" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/pool.png" />
+											<span><?= $i['pool'] ?></span>
 										</div>
 										<div class="card">
-											<img title="Restaurante" alt="icone de uma restaurante" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/food.png" />
-											<span><?= $i['snack'] ?></span>
+											<img title="wi-fi" alt="ícone do wi-fi " src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/wifi.png" />
+											<span><?= $i['wifi'] ?></span>
 										</div>
 									</div>
+
 								</div>
 							</div>
 						</div>
@@ -265,24 +270,6 @@ get_header();
 		?>
 	</div>
 </section>
-<!-- <section id="count" class="js-scroll fade-in">
-	<div class="card-cound">
-		<span id="value" class="value">1000 +</span>
-		<span class="description">Ilhas</span>
-	</div>
-	<div class="card-cound">
-		<span class="value">5+</span>
-		<span class="description">Praias</span>
-	</div>
-	<div class="card-cound">
-		<span class="value">5+</span>
-		<span class="description">Bares</span>
-	</div>
-	<div class="card-cound">
-		<span class="value">5+</span>
-		<span class="description">Bares</span>
-	</div>
-</section> -->
 <section id="gallery" class="js-scroll fade-in">
 	<div class="text-house">
 		<h2>
@@ -310,71 +297,6 @@ get_header();
 		</div>
 	</div>
 </section>
-<section id="modal-house">
-	<div id="myModalHouse" class="modal">
-		<div class="modal-content">
-			<span id="closeHouse" class="close">&times;</span>
-			<div class="content">
-				<div class="gallery">
-					<div class="gallery__item">
-						<input type="radio" id="img-1" checked name="gallery" class="gallery__selector" />
-						<img class="gallery__img" src="https://picsum.photos/id/1015/600/400.jpg" alt="" />
-						<label for="img-1" class="gallery__thumb"><img src="https://picsum.photos/id/1015/150/100.jpg" alt="" /></label>
-					</div>
-					<div class="gallery__item">
-						<input type="radio" id="img-2" name="gallery" class="gallery__selector" />
-						<img class="gallery__img" src="https://picsum.photos/id/1039/600/400.jpg" alt="" />
-						<label for="img-2" class="gallery__thumb"><img src="https://picsum.photos/id/1039/150/100.jpg" alt="" /></label>
-					</div>
-					<div class="gallery__item">
-						<input type="radio" id="img-3" name="gallery" class="gallery__selector" />
-						<img class="gallery__img" src="https://picsum.photos/id/1057/600/400.jpg" alt="" />
-						<label for="img-3" class="gallery__thumb"><img src="https://picsum.photos/id/1057/150/100.jpg" alt="" /></label>
-					</div>
-					<div class="gallery__item">
-						<input type="radio" id="img-4" name="gallery" class="gallery__selector" />
-						<img class="gallery__img" src="https://picsum.photos/id/106/600/400.jpg" alt="" />
-						<label for="img-4" class="gallery__thumb"><img src="https://picsum.photos/id/106/150/100.jpg" alt="" /></label>
-					</div>
-				</div>
-				<div class="information">
-					<h2> Casa 1</h2>
-					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod est iure mollitia atque similique ipsum, officia laborum tempora incidunt illo, dignissimos, rerum esse corrupti itaque eligendi quidem repellat natus asperiores.</p>
-					<hr />
-					<div class="characteristics">
-						<div class="chatacteristic-cards">
-							<div class="card">
-								<img title="Qauntidade de pessoas" alt="icone de pessoas" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/crowd.png" />
-								<span>6</span>
-							</div>
-							<div class="card">
-								<img title="Wi-fi" alt="icone wi-fi" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/wifi.png" />
-								<span>Sim</span>
-							</div>
-						</div>
-						<div class="chatacteristic-cards">
-							<div class="card">
-								<img title="Piscina" alt="icone de uma piscina" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/pool.png" />
-								<span>Não</span>
-							</div>
-							<div class="card">
-								<img title="Ar condicionado" alt="icone de uma restaurante" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/air-conditioning.png" />
-								<span>Não</span>
-							</div>
-						</div>
-					</div>
-					<div class="links-contact">
-						<a href="https://wa.me/5524999999999?text=Eu+gostaria+de+entender+mais+sobre+o+processo+de+trabalho+de+voc%C3%AAs." target="_blank">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/whatsapp.png" alt="logo do whatsApp">
-						</a>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
 <!-- TODO testes para aplicar video no header -->
 <!-- <section id="video">
 	<div class="container">

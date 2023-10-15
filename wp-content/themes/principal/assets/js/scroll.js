@@ -38,6 +38,13 @@ const handleScrollAnimation = () => {
     });
 };
 
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
 window.addEventListener('scroll', () => {
     handleScrollAnimation();
 });
@@ -46,3 +53,5 @@ window.addEventListener('load', () => {
     headerText.classList.add('scrolled');
     headerImg.classList.add('scrolled');
 })
+
+window.addEventListener('load', scrollToTop);
