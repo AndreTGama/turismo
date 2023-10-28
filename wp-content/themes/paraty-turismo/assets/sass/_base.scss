@@ -112,7 +112,7 @@
                 --s: 15px;
                 --b: 2px;
                 --w: 200px;
-                --c: #64c6c9;
+                --c: #102bd8;
 
                 width: var(--w);
                 aspect-ratio: 1;
@@ -158,9 +158,9 @@
     padding: 0 5%;
     display: flex;
     .img-about-us {
-        width: 50%;
+        width: 40%;
         img {
-            width: 100%;
+            width: 70%;
         }
     }
     .text-about-us {
@@ -191,6 +191,20 @@
             color: $light_black;
             font-weight: 100;
             text-align: justify;
+        }
+        .social-media {
+            margin-top: 30px;
+            display: flex;
+            background-color: $blue;
+            border-radius: 5px;
+            padding: 5px;
+            text-align: center;
+            justify-content: center;
+            img {
+                margin-right: 15px;
+                width: 30px;
+                height: 30px;
+            }
         }
     }
     @media (max-width: 768px) {
@@ -485,6 +499,7 @@
         cursor: pointer;
     }
 }
+
 // Teste
 .container {
     align-items: center;

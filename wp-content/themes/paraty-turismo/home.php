@@ -118,7 +118,7 @@ foreach ($homes as $home) {
 			</div>
 		</div>
 		<div id="header-img" class="img-header js-scroll slide-right">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/woman-walk.png" alt="centro historico de Paraty" />
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/woman-walk-blue.webp" alt="centro historico de Paraty" />
 		</div>
 	</div>
 	<div class="divisor"></div>
@@ -158,21 +158,21 @@ foreach ($homes as $home) {
 								<div class="characteristics">
 									<div class="chatacteristic-cards">
 										<div class="card">
-											<img title="Qauntidade de pessoas" alt="icone de pessoas" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/crowd.png" />
+											<img title="Qauntidade de pessoas" alt="icone de pessoas" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/crowd.webp" />
 											<span><?= $i['people'] ?></span>
 										</div>
 										<div class="card">
-											<img title="Ilhas" alt="icone de uma ilha" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/island-on-water.png" />
+											<img title="Ilhas" alt="icone de uma ilha" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/island-on-water.webp" />
 											<span><?= $i['islands'] ?></span>
 										</div>
 									</div>
 									<div class="chatacteristic-cards">
 										<div class="card">
-											<img title="Tempo de passeio" alt="icone de uma relógio" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/time.png" />
+											<img title="Tempo de passeio" alt="icone de uma relógio" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/time.webp" />
 											<span><?= $i['time'] ?></span>
 										</div>
 										<div class="card">
-											<img title="Restaurante" alt="icone de uma restaurante" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/food.png" />
+											<img title="Restaurante" alt="icone de uma restaurante" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/food.webp" />
 											<span><?= $i['snack'] ?></span>
 										</div>
 									</div>
@@ -181,7 +181,7 @@ foreach ($homes as $home) {
 						</div>
 						<div class="links-contact">
 							<a href="https://wa.me/5524999999999?text=Eu+gostaria+de+entender+mais+sobre+o+processo+de+trabalho+de+voc%C3%AAs." target="_blank">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/whatsapp.png" alt="logo do whatsApp">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/whatsapp.webp" alt="logo do whatsApp">
 							</a>
 						</div>
 					</div>
@@ -194,11 +194,22 @@ foreach ($homes as $home) {
 </section>
 <section id="about-us">
 	<div class="img-about-us js-scroll slide-left">
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/turista.png" alt="centro historico de Paraty" />
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/another-girl.webp" alt="Mulher olhando para o nada" />
 	</div>
 	<div class="text-about-us js-scroll slide-right">
 		<h2> Sobre Nós </h2>
 		<h3> Explore a deslumbrante cidade de Paraty, RJ, com Paraty Rentals & Cruises. Oferecemos casas de temporada à beira-mar e no centro histórico para uma estadia perfeita. Para aventuras inesquecíveis, embarque em nossas escunas e descubra as ilhas paradisíacas de Paraty. </h3>
+		<div class="social-media">
+			<a target="_blank" rel="noopener" href="https://www.facebook.com/smecrz/?locale=pt_BR">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/facebook.webp" alt="logo do facebook">
+			</a>
+			<a target="_blank" rel="noopener" href="https://instagram.com/secretaria.ed?igshid=YmMyMTA2M2Y=">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/instagram.webp" alt="logo do instagram">
+			</a>
+			<a target="_blank" rel="noopener" href="https://www.youtube.com/@secretariamunicipaldeeduca87">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/youtube.webp" alt="logo do youtube">
+			</a>
+		</div>
 	</div>
 </section>
 <section id="house">
@@ -236,21 +247,21 @@ foreach ($homes as $home) {
 								<div class="characteristics">
 									<div class="chatacteristic-cards">
 										<div class="card">
-											<img title="Ar Condicionado" alt="ícone do ar condicionado" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/air-conditioning.png" />
+											<img title="Ar Condicionado" alt="ícone do ar condicionado" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/air-conditioning.webp" />
 											<span><?= $i['airconditioning'] ?></span>
 										</div>
 										<div class="card">
-											<img title="Qauntidade de pessoas" alt="icone de pessoas" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/crowd.png" />
+											<img title="Qauntidade de pessoas" alt="icone de pessoas" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/crowd.webp" />
 											<span><?= $i['people'] ?></span>
 										</div>
 									</div>
 									<div class="chatacteristic-cards">
 										<div class="card">
-											<img title="Piscina" alt="ícone de uma piscina" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/pool.png" />
+											<img title="Piscina" alt="ícone de uma piscina" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/pool.webp" />
 											<span><?= $i['pool'] ?></span>
 										</div>
 										<div class="card">
-											<img title="wi-fi" alt="ícone do wi-fi " src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/wifi.png" />
+											<img title="wi-fi" alt="ícone do wi-fi " src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/wifi.webp" />
 											<span><?= $i['wifi'] ?></span>
 										</div>
 									</div>
@@ -260,7 +271,7 @@ foreach ($homes as $home) {
 						</div>
 						<div class="links-contact">
 							<a href="https://wa.me/5524999999999?text=Eu+gostaria+de+entender+mais+sobre+o+processo+de+trabalho+de+voc%C3%AAs." target="_blank">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/whatsapp.png" alt="logo do whatsApp">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/whatsapp.webp" alt="logo do whatsApp">
 							</a>
 						</div>
 					</div>
@@ -276,24 +287,24 @@ foreach ($homes as $home) {
 		<h2>
 			Galeria
 		</h2>
-		<div class="gallery-photo image-link">
-			<a class="div1" href="<?php echo get_template_directory_uri(); ?>/assets/dist/images/barco.webp">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/cidade-vertical.png" alt="an old car">
+		<div class="gallery-photo image-link" data-nav="thumbs" data-fit="cover" data-loop="true" data-allowfullscreen="true">
+			<a class="div1" href="<?php echo get_template_directory_uri(); ?>/assets/dist/images/centro-1.webp">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/centro-1.webp" alt="centro historico de paraty">
 			</a>
-			<a class="div2" href="<?php echo get_template_directory_uri(); ?>/assets/dist/images/barco.webp">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/barco.webp" alt="Barco">
+			<a class="div2" href="<?php echo get_template_directory_uri(); ?>/assets/dist/images/centro-2.webp">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/centro-2.webp" alt="centro historico de paraty">
 			</a>
-			<a class="div3" href="<?php echo get_template_directory_uri(); ?>/assets/dist/images/cidade-vertical.png">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/cidade-vertical.png" alt="an old car">
+			<a class="div3" href="<?php echo get_template_directory_uri(); ?>/assets/dist/images/centro-3.webp">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/centro-3.webp" alt="centro historico de paraty">
 			</a>
-			<a class="div4" href="<?php echo get_template_directory_uri(); ?>/assets/dist/images/barco.webp">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/barco.webp" alt="an old car">
+			<a class="div4" href="<?php echo get_template_directory_uri(); ?>/assets/dist/images/centro-4.jpg">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/centro-4.jpg" alt="centro historico de paraty">
 			</a>
-			<a class="div5" href="<?php echo get_template_directory_uri(); ?>/assets/dist/images/praia.webp">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/praia.webp" alt="an old car">
+			<a class="div5" href="<?php echo get_template_directory_uri(); ?>/assets/dist/images/centro5.jpg">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/centro5.jpg" alt="centro historico de paraty">
 			</a>
-			<a class="div6" href="<?php echo get_template_directory_uri(); ?>/assets/dist/images/cidade-vertical.png">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/cidade-vertical.png" alt="an old car">
+			<a class="div6" href="<?php echo get_template_directory_uri(); ?>/assets/dist/images/praia-1.webp">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/praia-1.webp" alt="praia">
 			</a>
 		</div>
 	</div>

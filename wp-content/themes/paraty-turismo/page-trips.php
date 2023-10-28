@@ -71,21 +71,21 @@ get_header();
 								<div class="characteristics">
 									<div class="chatacteristic-cards">
 										<div class="card">
-											<img title="Qauntidade de pessoas" alt="icone de pessoas" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/crowd.png" />
+											<img title="Qauntidade de pessoas" alt="icone de pessoas" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/crowd.webp" />
 											<span><?= $i['people'] ?></span>
 										</div>
 										<div class="card">
-											<img title="Ilhas" alt="icone de uma ilha" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/island-on-water.png" />
+											<img title="Ilhas" alt="icone de uma ilha" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/island-on-water.webp" />
 											<span><?= $i['islands'] ?></span>
 										</div>
 									</div>
 									<div class="chatacteristic-cards">
 										<div class="card">
-											<img title="Tempo de passeio" alt="icone de uma relógio" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/time.png" />
+											<img title="Tempo de passeio" alt="icone de uma relógio" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/time.webp" />
 											<span><?= $i['time'] ?></span>
 										</div>
 										<div class="card">
-											<img title="Restaurante" alt="icone de uma restaurante" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/food.png" />
+											<img title="Restaurante" alt="icone de uma restaurante" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/food.webp" />
 											<span><?= $i['snack'] ?></span>
 										</div>
 									</div>
@@ -94,7 +94,7 @@ get_header();
 						</div>
 						<div class="links-contact">
 							<a href="https://wa.me/5524999999999?text=Eu+gostaria+de+entender+mais+sobre+o+processo+de+trabalho+de+voc%C3%AAs." target="_blank">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/whatsapp.png" alt="logo do whatsApp">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/icons/whatsapp.webp" alt="logo do whatsApp">
 							</a>
 						</div>
 					</div>

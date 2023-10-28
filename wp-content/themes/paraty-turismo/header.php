@@ -10,8 +10,8 @@
 	<!-- JQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<!-- Magnific -->
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/dist/css/magnific-popup.css">
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/dist/js/jquery.magnific-popup.js"></script>
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/magnific-popup.css">
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.magnific-popup.js"></script>
 	<!-- Fotorama -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
@@ -29,8 +29,8 @@
 				)
 			);
 			?>
-			<a href="#home">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo da empres" />
+			<a href="<?php echo get_bloginfo('url');?>">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.webp" alt="logo da empres" />
 			</a>
 			<?php
 			wp_nav_menu(
