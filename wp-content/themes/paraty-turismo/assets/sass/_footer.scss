@@ -1,0 +1,107 @@
+footer {
+    padding: 0 5%;
+    margin-top: 30px;
+    margin-bottom: 0;
+    background-color: $footer;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    text-align: center;
+
+    h3 {
+        font-size: 1.5rem;
+        font-family: 'GreatVibes', sans-serif;
+        color: $light_black;
+        font-weight: 100;
+        display: inline-block;
+        position: relative;
+        margin-bottom: 0;
+    }
+
+    h4 {
+        font-size: .8rem;
+    }
+
+    .social-media {
+        text-align: center;
+        img {
+            width: 32px;
+            height: 32px;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+            &:hover {
+                filter: grayscale(0%);
+            }
+        }
+        ul {
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            padding: 0;
+        }
+    }
+
+    .site-map {
+        ul {
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            padding: 0;
+            li:not(:nth-child(1)) {
+                margin-top: 15px;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+                font-family: 'Lato', sans-serif;
+                color: $black;
+
+                &:hover {
+                    color: $light_black;
+                }
+            }
+        }
+    }
+
+    .address {
+        .links {
+            display: flex;
+            flex-direction: column;
+            a {
+                text-decoration: none;
+                color: inherit;
+                font-family: 'Lato', sans-serif;
+                color: $black;
+                margin-top: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 5px;
+                    filter: grayscale(100%);
+                    transition: filter 0.3s ease;
+                }
+                &:hover {
+                    color: $light_black;
+                    img {
+                        filter: grayscale(0);
+
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        flex-direction: column;
+        .social-media {
+            ul {
+                justify-content: center;
+                img{
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
