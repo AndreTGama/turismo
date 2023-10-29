@@ -1,5 +1,5 @@
 #header {
-    background-image: url('../images/life-original-10.png');
+    background-image: url('../images/life-original-10.webp');
     background-size: cover;
     text-align: center;
 
@@ -28,6 +28,7 @@
             img {
                 width: 350px;
                 height: 100%;
+                filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
             }
             @media (max-width: 768px) {
                 display: none;
@@ -155,17 +156,24 @@
 }
 
 #about-us {
+    background-image: url('../images/about-us-back.webp');
+    background-size: contain;
     padding: 0 5%;
     display: flex;
     .img-about-us {
-        width: 40%;
+        width: 50%;
         img {
-            width: 70%;
+            width: 60%;
+            filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
         }
     }
     .text-about-us {
         width: 50%;
-        text-align: end;
+        display: flex;
+        flex-direction: column;
+        align-content: inherit;
+        justify-content: space-between;
+        align-items: end;
         h2 {
             font-size: 2rem;
             font-family: 'GreatVibes', sans-serif;
@@ -186,24 +194,42 @@
             }
         }
         h3 {
-            margin-top: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2rem;
+            font-weight: bold;
+            color: $light_black;
+        }
+        h4 {
             font-size: 1rem;
             color: $light_black;
             font-weight: 100;
             text-align: justify;
         }
         .social-media {
-            margin-top: 30px;
             display: flex;
             background-color: $blue;
             border-radius: 5px;
             padding: 5px;
             text-align: center;
-            justify-content: center;
-            img {
-                margin-right: 15px;
-                width: 30px;
-                height: 30px;
+            justify-content: space-around;
+            align-items: center;
+            color: #fff;
+            filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+            width: 100%;
+            .icons {
+                display: flex;
+                a {
+                    margin-right: 15px;
+                    width: 30px;
+                    height: 30px;
+                    &:hover {
+                        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+                    }
+                }
+            }
+            span {
+                font-size: 2rem;
+                font-family: 'GreatVibes', sans-serif;
             }
         }
     }
@@ -213,6 +239,7 @@
         justify-content: center;
         .img-about-us {
             width: 100%;
+            text-align: center;
         }
         .text-about-us {
             width: 100%;
@@ -259,8 +286,7 @@
 }
 
 #house {
-    padding: 0 5%;
-    margin-top: 30px;
+    padding: 5%;
     .text-house {
         display: flex;
         flex-wrap: wrap;
